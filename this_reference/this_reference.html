@@ -18,7 +18,7 @@
         var objb = obj.b;
 
         obj.b();
-        //objb();
+        objb(); //this 在这里指向全局对象widow
         obj.b.call(window);
     </script>
 </body>
