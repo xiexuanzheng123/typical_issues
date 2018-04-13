@@ -16,8 +16,8 @@
         }
         var a = 2;
         var objb = obj.b;
-/**带this输出122**/    /**不带this输出222*/
-        obj.b();
+
+        obj.b();/**带this输出122**/    /**不带this输出222*/
         objb(); //this 在这里指向全局对象widow
         obj.b.call(window);
     </script>
