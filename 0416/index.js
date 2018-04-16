@@ -58,7 +58,7 @@
  * 3 水平居中
  *   3-1 定宽，此时text-align: center无用，水平居中：margin：auto
  *   3-2 不定宽，
- *      3-2-1 在元素外加table标签，该元素写在td内，然后设置margin为auto
+ *      3-2-1 在元素外加table标签，该元素写在td内，然后设置table的margin为auto
  *      3-2-2 给该元素设置display: inline方法，
  *      3-2-3 在父元素设置position:relative和left：50%，子元素设置position：relative和left：50%
  *     
