@@ -9,7 +9,6 @@
        .div1 {
            background: #000080;
            border: 1px solid red;
-           height: 200px;
        } 
        .div2 {
            background: #800080;
@@ -29,12 +28,16 @@
            height: 80px;
            background-color: #ddd;
        }
+       .clearfloat {
+           clear: both;
+       }
     </style>
 </head>
 <body>
     <div class="div1">
         <div class="left">Left</div>
         <div class="right">Right</div>
+        <div class="clearfloat"></div>
     </div>
     <div class="div2">div2</div>
 </body>
