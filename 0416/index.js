@@ -64,4 +64,9 @@
  * 
  * 4 垂直居中     
  *   4-1 使用position：absolute，设置left、top、margin-left、margin-top的属性
+ * 
+ * 九 CSS3有哪些新特性？
+ *  css3实现圆角border-radius
+ *  阴影，box-shadow：10px
+ *  
  */
