@@ -38,9 +38,28 @@
  * visibility：false
  * 
  * 七 清除浮动
- * 使用带clear的空元素
- * 使用css的overflow属性
- * 使用css的after
+ * 使用带clear的空元素,增加一个空的div，利用css清除浮动，让父级自动获取高度
+ * 使用css的overflow属性, 必须定义width，同时不能定义height，不能和position同时使用
+ * 使用css的after, 其实质跟空元素差不多
  * 使用邻接元素
  * 
+ * 八 CSS居中
+ * 1 水平据中设置：
+ *   1-1 行内设置 在父元素中设置text-align: center
+ *   1-2 Flex布局：display: flex; justify-content: center
+ * 
+ * 2 垂直居中设置：
+ *   2-1 父元素高度确定的单行文本（内联元素）
+ *      设置heigh=line-height
+ *   2-2 父元素确定的多行文本（内联元素）
+ *      2-2-1 插入table，然后设置vertical-align: middle
+ *      2-2-2 先设置display: table-cell, 再设置verticle-align: middle
+ * 
+ * 3 水平居中
+ *   3-1 定宽，此时text-align: center无用，水平居中：margin：auto
+ *   3-2 不定宽，
+ *      3-2-1 在元素外加table标签，该元素写在td内，然后设置margin为auto
+ *      3-2-2 给该元素设置display: inline方法，
+ *      3-2-3 在父元素设置position:relative和left：50%，子元素设置position：relative和left：50%
+ *     
  */
