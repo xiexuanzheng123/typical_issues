@@ -69,4 +69,30 @@
  *  css3实现圆角border-radius
  *  阴影，box-shadow：10px
  *  
+ * 十 数组操作
+ *  push（）、pop（）尾部操作插入去除
+ *  unshift（）、shift（）头部操作插入去除
+ * 
+ * 十一 ajax请求时get和post的区别
+ *  1 get请求时，参数在url中显示，post不会显示出了
+ *  2 get请求发送数据量小，post请求发送数据量大
+ *  3 get请求需注意缓存的问题，post不需要担心
+ *  get方式可传送简单数据，但大小一般限制到1kb内，数据追加到url中发送（http的header传送），另外一点是浏览器会自动缓存，所以说存在安全问题
+ *  post方式浏览器把数据作为http消息的实体内容发送，而不是作为URl地址的参数传送，传送数据量大
+ * 
+ * 十二 call和apply的区别
+ *  参数不同： Object.call(this, obj1, obj2, obj3), Object.apply(this, arguments)
+ * 
+ * 十三 添加删除替换插入节点
+ *  obj.appendChild()
+ *  obj.insertBefore()
+ *  obj.replaceChild()
+ *  obj.removeChild()
+ * 
+ * 十四 javascript同源策略
+ *  一段脚本只能读取来自于同一来源的窗口和文档的属性，同源是指主机名、协议、端口号
+ * 
+ * 十五 编写一个b继承a的方法 
  */
+
+
