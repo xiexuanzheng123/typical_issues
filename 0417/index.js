@@ -73,4 +73,80 @@
  * 十三 splice
  *  splice(index, num, item)方法是向数组中添加项目，或是从数组中删除项目，并返回被删除的项目，结果是数组
  *  slice(start, end)返回新的数组
+ * 
+ * 十四 ES6新加功能
+ *  模板字符串， 箭头函数， for-of， arguments对象可被不定参数和默认参数完美替代， promise， let和const， 块级作用域
+ * 
+ * 十五 继承
+ *  原型链继承：将父类的实例作为子类的原型
+ *  call继承：Animal.call(this)
+ *  instance继承：return instance
+ * 
+ * 十六 HTTP2.0
+ *  引入了‘服务端推（server push）’，允许服务端在客户端需要数据之前就主动将数据发送到客户端进行缓存，从而提高性能
+ *  提供更多的加密支持
+ *  多路技术，允许多个消息在一个连接上同时交差
+ *  增加了头压缩
+ * 
+ * 十七 defer和async
+ *  defer并行加载js文件，会按照页面script标签顺序执行
+ *  async并行加载js文件，下载完成立即执行，不会按照页面上script标签的顺序执行
+ * 
+ * 十八 Cookie
+ *  1 每个域名下最多生成20个cookie
+ *  2 每个cookie的大小有限制（4kb）
+ *  3 安全性存在问题
+ *  4 cookie与session的区别：
+ *   4-1 cookie存在客户端浏览器上，session存在服务器上
+ *   4-2 cookie不是很安全，session比较安全
+ *   4-3 session会占用服务器性能
+ *   4-4 session存储数据大些
+ *  
+ * 十九 浏览器兼容问题
+ *  1 浏览器默认的margin和padding不同，
+ *  2 IE在请求URL时，不加时间戳不会重新请求
+ *  3 IE6双边距bug
+ * 
+ * 二十 上下margin重合问题
+ *  垂直两个元素避免设置margin-top和margin-bottom
+ *  父元素子元素，子元素设置margin-top无效，解决方法：
+ *      1 为父元素设置border 
+ *      2 为父元素添加overflow：hidden 
+ *      3 为父元素设置padding
+ *      4 父元素设置position：fixed， relative不可以
+ *      5 父元素设置display: table
+ *      6 子元素前面添加兄弟元素content："", overflow: hidden
+ *      7 给父元素加一个值
+ * 
+ * 二十一 float问题
+ *  浮动元素脱离文档流，不占据空间，浮动元素碰到包含它的边框或者浮动元素边框停止
+ *  1 使用空标签清除浮动，clear: both
+ *  2 使用overflow： 给包含浮动元素的父标签添加css属性：overflow：hidden
+ *  浮动元素引起的问题：
+ *  1 父元素无法被撑开，影响父元素同级元素
+ *  2 与浮动元素同级的非浮动元素紧跟
+ *  
+ * 二十二 HTML5新增加的特性
+ *  header nav footer aside article section
+ *  audio video
+ *  canvas
+ *  geolocation
+ *  localStorage
+ *  calendar date time email 
+ *  webWorker websocket 
+ * 
+ * 二十三 new操作具体做了什么
+ *  1 创建一个新对象
+ *  2 将构造函数的作用域付给新对象（this指向了这个新对象）
+ *  3 执行构造函数中的代码，对这个对象添加属性和方法
+ *  4 返回新对象
+ *  var obj = new Base();
+ * 
+ *  1 var obj = {};
+ *  2 obj.__proto__ = Base.prototype;
+ *  3 Base.call(obj);
+ * 
+ * 二十四 call和apply
+ *  动态改变某个函数的运行上下文
+ *  参数不一样call的参数是数组，apply的是arguments
  */
