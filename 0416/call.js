@@ -29,7 +29,7 @@ function Cat(name) {
 }
 
 var cat = new Cat();
-console.log(cat.name);
-console.log(cat.sleep());
-console.log(cat instanceof Animal);
-console.log(cat instanceof Cat);
+console.log(cat.name);//Tom
+console.log(cat.sleep());//Tom正在睡觉
+console.log(cat instanceof Animal);//false
+console.log(cat instanceof Cat);//true
