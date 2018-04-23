@@ -186,4 +186,34 @@
  *  √ 500：Internal Server Error 服务器端错误
  *  √ 503：Server Unavailable 服务器端暂时无法处理i请求
  * 
+ * 二十九 promise
+ *  四种状态：
+ *   1 pending初始状态
+ *   2 fulfilled 成功的操作
+ *   3 rejected 失败的操作
+ *   4 settled 已被fullfilled或者rejected
+ *  构造异步函数
+ *   var promise = new Promise(function(resolve, reject){
+ *      if(successed){
+ *          resolve()
+ *      } else {
+ *          rejected()
+ *      }       
+ *   })
+ * 
+ * 三十 删除cookie
+ *  通过设置时间来删除
+ *  
+ * 三十一 AMD和CMD的理解
+ *  CommonJS是服务器端模块的规范，Node采用了这个规范，Commonjs规范是同步的，也就是说只有加载完成，才能执行后面的操作
+ *  AMD规范是非同步加载模块，允许回调，Requirejs
+ * 
+ * 三十二 网络七层模型
+ *  物理层
+ *  数据链路层
+ *  网络层
+ *  传输层
+ *  会话层
+ *  表示层
+ *  应用层
  */
