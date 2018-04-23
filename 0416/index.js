@@ -56,7 +56,8 @@
  *      2-2-2 先设置display: table-cell, 再设置verticle-align: middle
  * 
  * 3 水平居中
- *   3-1 定宽，此时text-align: center无用，水平居中：margin：auto
+ *   3-1 定宽，此时text-align: center无用，水平居中：margin：auto;
+ *       定宽+position：absolute的情况水平居中，margin：0 auto left:0 right:0
  *   3-2 不定宽，
  *      3-2-1 在元素外加table标签，该元素写在td内，然后设置table的margin为auto
  *      3-2-2 给该元素设置display: inline方法，
@@ -64,6 +65,9 @@
  * 
  * 4 垂直居中     
  *   4-1 使用position：absolute，设置left、top、margin-left、margin-top的属性
+ *   left: 50%
+ *   top: 50%
+ *   margin: -(height/2) 0 0 -(width/2)
  * 
  * 九 CSS3有哪些新特性？
  *  css3实现圆角border-radius
