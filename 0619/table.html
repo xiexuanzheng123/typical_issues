@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="./table.css" />
+</head>
+<body>
+    <div>
+        <span></span>
+    </div>
+</body>
+<script type="text/javascript">
+    
+function getApplications(issue, serviceID) {
+    if (issue.serviceApplications) {
+        for (let i=0; i<issue.serviceApplications.length; i++) {
+            if (issue.serviceApplications[i].serviceId === Number(serviceID) + 1) {
+                return issue.serviceApplications[i].applicationIds;
+            }
+        }
+    }
+    
+}
+const data = {
+    props: {
+        issue: { 
+            confirmingContents: {contents: [{content: "confirming", language: "en_US"}], startDate: 1529058426940},
+            countryIds: [2],
+            editingContents: {contents: [{language: "en_US", content: "editing"}]},
+            issueId:"22c581ab-ce32-4e99-8a44-568a8853dcaf_2",
+            issueStatus: 2,
+            issueType: 1,
+            serviceApplictations:[{applicationIds: [2], serviceId: 2}],
+            serviceIds: [2]
+        },
+        uServices: [
+            {serviceId: 1, service: "Home"},
+            {serviceId: 2, service: "Message"},
+            {serviceId: 3, service: "Mail"},
+            {serviceId: 4, service: "Calendar"},
+            {serviceId: 5, service: "Contact"},
+            {serviceId: 6, service: "Drive"},
+            {serviceId: 7, service: "Admin"},
+            {serviceId: 8, service: "Authentification"},
+            {serviceId: 9, service: "Form"}
+        ],
+        uServiceApplications: [
+            {serviceId: 1, service: "Home", applications: [{applicationId: 1, application: "Mobile App"}, {applicationId: 2, application: "PCweb"}]},
+            {serviceId: 2, service: "Message", applications: [{applicationId: 1, application: "Moblie App"},{applicationId: 3, application: "PCApp"},{applicationId: 2, application: "PCweb"}]},
+            {serviceId: 3, service: "Mail", applications: [{applicationId: 1, application: "Moblie App"},{applicationId: 2, application: "PCweb"},{applicationId: 4, application: "POP/SMTP"},{applicationId: 5, application: "IMAP/SMTP"}]},
+            {serviceId: 4, service: "Calendar", applications: [{applicationId: 1, application: "Moblie App"},{applicationId: 2, application: "PCweb"},{applicationId: 6, application: "CalDAV"}]},
+            {serviceId: 5, service: "Contact", applications: [{applicationId: 1, application: "Moblie App"},{applicationId: 2, application: "PCweb"}]},
+            {serviceId: 6, service: "Drive", applications: [{applicationId: 1, application: "Moblie App"},{applicationId: 2, application: "PCweb"},{applicationId: 7, application: "Drive Explorer"}]},
+            {serviceId: 7, service: "Admin", applications: [{applicationId: 1, application: "Moblie App"},{applicationId: 2, application: "PCweb"}]},
+            {serviceId: 8, service: "Authentification", applications: [{applicationId: 1, application: "Moblie App"},{applicationId: 3, application: "PCApp"},{applicationId: 2, application: "PCweb"}]},
+            {serviceId: 9, service: "Form", applications: [{applicationId: 1, application: "Moblie App"},{applicationId: 2, application: "PCweb"}]},
+        ],
+        getApplications: getApplications,
+        serviceId: "1"
+    }
+};
+console.log(getApplications(data.props.issue, data.props.serviceId));
+</script>
+</html>

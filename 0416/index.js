@@ -139,3 +139,10 @@
  */
 
 
+let promise = new Promise( (resolve, reject) => {
+    if(success) {
+        resolve(value); // pending -> resolved
+    } else {
+        reject(error); // pending -> rejected
+    }
+})

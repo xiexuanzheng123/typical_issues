@@ -1,0 +1,21 @@
+button {
+    padding: .3em .8em;
+    background: #58a linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: .2em;
+    box-shadow: 0 -.05px .25px rgba(0, 0, 0, .5);
+    text-shadow: 0 -.05em .05em rgba(0, 0, 0, .5);
+    font-size: 125%;
+    line-height: 1.5;
+}
+button.cancel {
+    background-color: #c00;
+}
+button.ok {
+    background-color: #6b0;
+}
+hr {
+    height: 0.5em;
+    background-color: currentColor;
+}
