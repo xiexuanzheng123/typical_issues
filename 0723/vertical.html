@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            background: black;
+            color: white;
+            padding-left: 20px;
+            line-height: 10px;
+        }
+        .dot {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: white;
+            vertical-align: bottom;
+            vertical-align: text-bottom;
+            /**text-bottom的位置没有随着line-height的改变而改变，
+            bottom则会改变， text-bottom是与父标签的文字底部对齐，bottom是相对于
+            父标签底部对齐，**/
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <span class="box">
+        <span class="dot"></span>
+        我是一段文字
+    </span>
+</body>
+</html>
