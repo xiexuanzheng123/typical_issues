@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cascadeDown (event) {
+            alert("Capturing: " + this);
+        }
+        function bubbleUp(event) {
+            alert("Bubble: " + this);
+        }
+        window.onload=setup;
+        function setup(event) {
+            document.addEventListener('click', cascadeDown, true);
+            document.forms[0].addEventListener('click', cascadeDown, true);
+            document.forms[0].elements[0].addEventListener('click', cascadeDown, true);
+
+            document.addEventListener('click', bubbleUp, false);
+            document.forms[0].addEventListener('click', bubbleUp, false);
+            document.forms[0].elements[0].addEventListener('click', bubbleUp, false);
+        }
+    </script>   
+    <form id="persionData" action="">
+        <p>
+            FirstName: <input type="text" id="firstName" /><br /><br />
+            SecondName: <input type="text" id="SecondName" />
+        </p>
+    </form> 
+</body>
+</html>
