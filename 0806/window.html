@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>window</h2>
+    <script>
+    /***
+     * 创建新弹出窗口有三个方法，还有一个用来创建一个包含部分窗口基础设施的窗口
+     * 1 alert
+     * 2 prompt
+     * 3 confirm
+     */     
+    var newWindow = window.open('./bom.html', 'bom','width=600,height=600,toolbar=no,location=no');
+    /**
+     * 通过窗口引用就能操纵新打开的窗口
+     * 通过关键字opener就能操作父窗口
+     * 要操作包含当前运行脚本的窗口，这应该使用self
+     * 
+    */
+    newWindow.moveTo(400,400);
+    newWindow.focus();
+    newWindow.resizeTo(300, 300)
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>BOM</h2>
+    <input id="btn" type="button" value="close"/>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', function () {self.close()}, false);
+        /**
+         * 可以通过window对象来访问BOM中的所有对象，是最顶层的
+         * window-----document--------forms
+         *        |              |-----cookie
+         *        |              |-----links/anchors
+         *        |              |-----images
+         *        | 
+         *        |--navigator
+         *        |
+         *        |--history
+         *        |
+         *        |--location
+         *        |
+         *        |--frames
+         *        |
+         *        |--screen
+         * 
+         * 
+         * 
+         * window对象的方法和属性可以分为四类：
+         * 1 创建新的窗口，维护现有的窗口行为
+         * 2 在窗口中创建带分区的文档(窗体和iframe)
+         * 3 定时器的创建和控制
+         * 4 控制浏览器窗口
+         */
+    </script>
+</body>
+</html>
