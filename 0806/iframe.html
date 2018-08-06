@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="">
+            <p>
+                <input type="radio" name="color" value="red"/>Red<br />
+                <input type="radio" name="color" value="blue"/>Blue<br />
+            </p>
+        </form>
+    </div>
+    <iframe name="myFrame" id="myFrame" style="width: 0; height: 0; border: 0" src="service.php"></iframe>
+    <div id="result"></div>
+    <script>
+        document.forms[0].addEventListener('click', colorChange, false); 
+        
+        function colorChange () {
+            var colors = document.forms[0].color;
+            var result = document.getElementById('result');
+            for (var i = 0; i < colors.length; i++) {
+                var myFrame = document.getElementById('myFrame');
+                myFrame.contentWindow.location.href = 'service.php?color=' + colors[i].value;
+                myFrame.onload = function () {
+                    result.innerHTML = myFrame.contentWindow.document.getElementById('val2').innerHTML;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
