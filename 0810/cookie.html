@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /******
+         * cookie 限制
+         * 安全性
+         * 存储容量
+         * 同源安全策略：
+         * 域 协议 端口
+         * http服务器提供的机制
+
+         cookie包括名称，关联的值，过期日期，与该cookie想关联的路径
+         一条cookie包含键、值、域名、路径、过期日期、sameSite
+         获得一个安全的cookie只能通过SSL协议（HTTPS而不是HTTP）
+         */   
+        var cookieDate = new Date();
+        document.cookie = `name=encodeURI(12); expires=${cookieDate}`;   
+    </script>
+</body>
+</html>
