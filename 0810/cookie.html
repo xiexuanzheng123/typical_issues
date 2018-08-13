@@ -20,8 +20,12 @@
          一条cookie包含键、值、域名、路径、过期日期、sameSite
          获得一个安全的cookie只能通过SSL协议（HTTPS而不是HTTP）
          */   
-        var cookieDate = new Date();
-        document.cookie = `name=encodeURI(12); expires=${cookieDate}`;   
+        let cookie = document.cookie;
+        let first = cookie.indexOf('_gid=');
+        if (first>=0) {
+            let str = cookie.substring(first, cookie.length);
+            let last = str.indexOf(';');
+        }  
     </script>
 </body>
 </html>
