@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /**
+     * Getter Setter
+     * */    
+    function Tune() {
+
+    }
+    function printTitle() {
+        document.writeln(this.title + "<br />");
+    }
+    window.onload = function() {
+        var t = Tune.prototype;
+        t.__defineGetter__("title", function() {return "Title is " + this.myTitle;});
+        t.__defineSetter__("title", function(tt) {this.myTitle = tt;});
+        t.print = printTitle;
+        let oneTune = new Tune;
+        oneTune.title = "One Title";
+        oneTune.print();
+
+        let anotherTune = new Tune;
+        anotherTune.title = "Another Title";
+        anotherTune.print();
+    }
+    </script>
+</body>
+</html>
